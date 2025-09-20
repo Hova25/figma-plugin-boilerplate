@@ -1,6 +1,339 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --radius-*: initial;
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  --radius-3: 0.75rem;
+  --radius-4: 1rem;
+  --radius-5: 1.25rem;
+  --radius-6: 1.5rem;
+  --radius-7: 1.75rem;
+  --radius-8: 2rem;
+  --radius-9: 2.25rem;
+  --radius-10: 2.5rem;
+  --radius-0_5: 0.125rem;
+  --radius-0_75: 0.188rem;
+  --radius-1_5: 0.375rem;
+
+  --text-2xs: 0.688rem;
+
+  --background-color-default: var(--figma-color-bg);
+  --background-color-menu: var(--figma-color-bg-menu);
+
+  --background-color-brand-default: var(--figma-color-bg-brand);
+  --background-color-brand-hover: var(--figma-color-bg-brand-hover);
+  --background-color-brand-pressed: var(--figma-color-bg-brand-pressed);
+  --background-color-brand-secondary: var(--figma-color-bg-brand-secondary);
+  --background-color-brand-tertiary: var(--figma-color-bg-brand-tertiary);
+
+  --background-color-component-default: var(--figma-color-bg-component);
+  --background-color-component-hover: var(--figma-color-bg-component-hover);
+  --background-color-component-pressed: var(--figma-color-bg-component-pressed);
+  --background-color-component-secondary: var(
+    --figma-color-bg-component-secondary
+  );
+  --background-color-component-tertiary: var(
+    --figma-color-bg-component-tertiary
+  );
+
+  --background-color-danger-default: var(--figma-color-bg-danger);
+  --background-color-danger-hover: var(--figma-color-bg-danger-hover);
+  --background-color-danger-pressed: var(--figma-color-bg-danger-pressed);
+  --background-color-danger-secondary: var(--figma-color-bg-danger-secondary);
+  --background-color-danger-tertiary: var(--figma-color-bg-danger-tertiary);
+
+  --background-color-disabled-default: var(--figma-color-bg-disabled);
+  --background-color-disabled-secondary: var(
+    --figma-color-bg-disabled-secondary
+  );
+
+  --background-color-hover: var(--figma-color-bg-hover);
+  --background-color-inverse: var(--figma-color-bg-inverse);
+
+  --background-color-onselected-default: var(--figma-color-bg-onselected);
+  --background-color-onselected-hover: var(--figma-color-bg-onselected-hover);
+  --background-color-onselected-pressed: var(
+    --figma-color-bg-onselected-pressed
+  );
+
+  --background-color-pressed: var(--figma-color-bg-pressed);
+  --background-color-secondary: var(--figma-color-bg-secondary);
+
+  --background-color-selected-default: var(--figma-color-bg-selected);
+  --background-color-selected-hover: var(--figma-color-bg-selected-hover);
+  --background-color-selected-pressed: var(--figma-color-bg-selected-pressed);
+  --background-color-selected-secondary: var(
+    --figma-color-bg-selected-secondary
+  );
+  --background-color-selected-strong: var(--figma-color-bg-selected-strong);
+  --background-color-selected-tertiary: var(--figma-color-bg-selected-tertiary);
+
+  --background-color-success-default: var(--figma-color-bg-success);
+  --background-color-success-hover: var(--figma-color-bg-success-hover);
+  --background-color-success-pressed: var(--figma-color-bg-success-pressed);
+  --background-color-success-secondary: var(--figma-color-bg-success-secondary);
+  --background-color-success-tertiary: var(--figma-color-bg-success-tertiary);
+
+  --background-color-tertiary: var(--figma-color-bg-tertiary);
+
+  --background-color-warning-default: var(--figma-color-bg-warning);
+  --background-color-warning-hover: var(--figma-color-bg-warning-hover);
+  --background-color-warning-pressed: var(--figma-color-bg-warning-pressed);
+  --background-color-warning-secondary: var(--figma-color-bg-warning-secondary);
+  --background-color-warning-tertiary: var(--figma-color-bg-warning-tertiary);
+
+  --text-color-default: var(--figma-color-text);
+  --text-color-menu: var(--figma-color-text-menu);
+
+  --text-color-brand-default: var(--figma-color-text-brand);
+  --text-color-brand-secondary: var(--figma-color-text-brand-secondary);
+  --text-color-brand-tertiary: var(--figma-color-text-brand-tertiary);
+
+  --text-color-component-default: var(--figma-color-text-component);
+  --text-color-component-pressed: var(--figma-color-text-component-pressed);
+  --text-color-component-secondary: var(--figma-color-text-component-secondary);
+  --text-color-component-tertiary: var(--figma-color-text-component-tertiary);
+
+  --text-color-danger-default: var(--figma-color-text-danger);
+  --text-color-danger-secondary: var(--figma-color-text-danger-secondary);
+  --text-color-danger-tertiary: var(--figma-color-text-danger-tertiary);
+
+  --text-color-disabled: var(--figma-color-text-disabled);
+  --text-color-hover: var(--figma-color-text-hover);
+
+  --text-color-onbrand-default: var(--figma-color-text-onbrand);
+  --text-color-onbrand-secondary: var(--figma-color-text-onbrand-secondary);
+  --text-color-onbrand-tertiary: var(--figma-color-text-onbrand-tertiary);
+
+  --text-color-oncomponent-default: var(--figma-color-text-oncomponent);
+  --text-color-oncomponent-secondary: var(
+    --figma-color-text-oncomponent-secondary
+  );
+  --text-color-oncomponent-tertiary: var(
+    --figma-color-text-oncomponent-tertiary
+  );
+
+  --text-color-ondanger-default: var(--figma-color-text-ondanger);
+  --text-color-ondanger-secondary: var(--figma-color-text-ondanger-secondary);
+  --text-color-ondanger-tertiary: var(--figma-color-text-ondanger-tertiary);
+
+  --text-color-ondisabled: var(--figma-color-text-ondisabled);
+  --text-color-oninverse: var(--figma-color-text-oninverse);
+
+  --text-color-onselected-default: var(--figma-color-text-onselected);
+  --text-color-onselected-secondary: var(
+    --figma-color-text-onselected-secondary
+  );
+  --text-color-onselected-strong: var(--figma-color-text-onselected-strong);
+  --text-color-onselected-tertiary: var(--figma-color-text-onselected-tertiary);
+
+  --text-color-onsuccess-default: var(--figma-color-text-onsuccess);
+  --text-color-onsuccess-secondary: var(--figma-color-text-onsuccess-secondary);
+  --text-color-onsuccess-tertiary: var(--figma-color-text-onsuccess-tertiary);
+
+  --text-color-onwarning-default: var(--figma-color-text-onwarning);
+  --text-color-onwarning-secondary: var(--figma-color-text-onwarning-secondary);
+  --text-color-onwarning-tertiary: var(--figma-color-text-onwarning-tertiary);
+
+  --text-color-secondary-default: var(--figma-color-text-secondary);
+  --text-color-secondary-hover: var(--figma-color-text-secondary-hover);
+
+  --text-color-selected-default: var(--figma-color-text-selected);
+  --text-color-selected-secondary: var(--figma-color-text-selected-secondary);
+  --text-color-selected-tertiary: var(--figma-color-text-selected-tertiary);
+
+  --text-color-success-default: var(--figma-color-text-success);
+  --text-color-success-secondary: var(--figma-color-text-success-secondary);
+  --text-color-success-tertiary: var(--figma-color-text-success-tertiary);
+
+  --text-color-tertiary-default: var(--figma-color-text-tertiary);
+  --text-color-tertiary-hover: var(--figma-color-text-tertiary-hover);
+
+  --text-color-warning-default: var(--figma-color-text-warning);
+  --text-color-warning-secondary: var(--figma-color-text-warning-secondary);
+  --text-color-warning-tertiary: var(--figma-color-text-warning-tertiary);
+
+  --text-color-icon-default: var(--figma-color-icon);
+
+  --text-color-icon-brand-default: var(--figma-color-bg-brand);
+  --text-color-icon-brand-pressed: var(--figma-color-icon-brand-pressed);
+  --text-color-icon-brand-secondary: var(--figma-color-icon-brand-secondary);
+  --text-color-icon-brand-tertiary: var(--figma-color-icon-brand-tertiary);
+
+  --text-color-icon-component-default: var(--figma-color-icon-component);
+  --text-color-icon-component-pressed: var(
+    --figma-color-icon-component-pressed
+  );
+  --text-color-icon-component-secondary: var(
+    --figma-color-icon-component-secondary
+  );
+  --text-color-icon-component-tertiary: var(
+    --figma-color-icon-component-tertiary
+  );
+
+  --text-color-icon-danger-default: var(--figma-color-icon-danger);
+  --text-color-icon-danger-hover: var(--figma-color-icon-danger-hover);
+  --text-color-icon-danger-pressed: var(--figma-color-icon-danger-pressed);
+
+  --text-color-icon-danger-secondary-default: var(
+    --figma-color-icon-danger-secondary
+  );
+  --text-color-icon-danger-secondary-hover: var(
+    --figma-color-icon-danger-secondary-hover
+  );
+
+  --text-color-icon-danger-tertiary: var(--figma-color-icon-danger-tertiary);
+
+  --text-color-icon-disabled: var(--figma-color-icon-disabled);
+  --text-color-icon-hover: var(--figma-color-icon-hover);
+
+  --text-color-icon-onbrand-default: var(--figma-color-icon-onbrand);
+  --text-color-icon-onbrand-secondary: var(
+    --figma-color-icon-onbrand-secondary
+  );
+  --text-color-icon-onbrand-tertiary: var(--figma-color-icon-onbrand-tertiary);
+
+  --text-color-icon-oncomponent-default: var(--figma-color-icon-oncomponent);
+  --text-color-icon-oncomponent-secondary: var(
+    --figma-color-icon-oncomponent-secondary
+  );
+  --text-color-icon-oncomponent-tertiary: var(
+    --figma-color-icon-oncomponent-tertiary
+  );
+
+  --text-color-icon-ondanger-default: var(--figma-color-icon-ondanger);
+  --text-color-icon-ondanger-secondary: var(
+    --figma-color-icon-ondanger-secondary
+  );
+  --text-color-icon-ondanger-tertiary: var(
+    --figma-color-icon-ondanger-tertiary
+  );
+
+  --text-color-icon-ondisabled: var(--figma-color-icon-ondisabled);
+  --text-color-icon-oninverse: var(--figma-color-icon-oninverse);
+
+  --text-color-icon-onselected-default: var(--figma-color-icon-onselected);
+  --text-color-icon-onselected-secondary: var(
+    --figma-color-icon-onselected-secondary
+  );
+  --text-color-icon-onselected-strong: var(
+    --figma-color-icon-onselected-strong
+  );
+  --text-color-icon-onselected-tertiary: var(
+    --figma-color-icon-onselected-tertiary
+  );
+
+  --text-color-icon-onsuccess-default: var(--figma-color-icon-onsuccess);
+  --text-color-icon-onsuccess-secondary: var(
+    --figma-color-icon-onsuccess-secondary
+  );
+  --text-color-icon-onsuccess-tertiary: var(
+    --figma-color-icon-onsuccess-tertiary
+  );
+
+  --text-color-icon-onwarning-default: var(--figma-color-icon-onwarning);
+  --text-color-icon-onwarning-secondary: var(
+    --figma-color-icon-onwarning-secondary
+  );
+  --text-color-icon-onwarning-tertiary: var(
+    --figma-color-icon-onwarning-tertiary
+  );
+
+  --text-color-icon-pressed: var(--figma-color-icon-pressed);
+
+  --text-color-icon-secondary-default: var(--figma-color-icon-secondary);
+  --text-color-icon-secondary-hover: var(--figma-color-icon-secondary-hover);
+
+  --text-color-icon-selected-default: var(--figma-color-icon-selected);
+  --text-color-icon-selected-secondary: var(
+    --figma-color-icon-selected-secondary
+  );
+  --text-color-icon-selected-tertiary: var(
+    --figma-color-icon-selected-tertiary
+  );
+
+  --text-color-icon-success-default: var(--figma-color-icon-success);
+  --text-color-icon-success-pressed: var(--figma-color-icon-success-pressed);
+  --text-color-icon-success-secondary: var(
+    --figma-color-icon-success-secondary
+  );
+  --text-color-icon-success-tertiary: var(--figma-color-icon-success-tertiary);
+
+  --text-color-icon-tertiary-default: var(--figma-color-icon-tertiary);
+  --text-color-icon-tertiary-hover: var(--figma-color-icon-tertiary-hover);
+
+  --text-color-icon-warning-default: var(--figma-color-icon-warning);
+  --text-color-icon-warning-pressed: var(--figma-color-icon-warning-pressed);
+  --text-color-icon-warning-secondary: var(
+    --figma-color-icon-warning-secondary
+  );
+  --text-color-icon-warning-tertiary: var(--figma-color-icon-warning-tertiary);
+
+  --border-color-default: var(--figma-color-border);
+
+  --border-color-brand-default: var(--figma-color-border-brand);
+  --border-color-brand-strong: var(--figma-color-border-brand-strong);
+
+  --border-color-component-default: var(--figma-color-border-component);
+  --border-color-component-hover: var(--figma-color-border-component-hover);
+  --border-color-component-strong: var(--figma-color-border-component-strong);
+
+  --border-color-danger-default: var(--figma-color-border-danger);
+  --border-color-danger-strong: var(--figma-color-border-danger-strong);
+
+  --border-color-disabled-default: var(--figma-color-border-disabled);
+  --border-color-disabled-strong: var(--figma-color-border-disabled-strong);
+
+  --border-color-onbrand-default: var(--figma-color-border-onbrand);
+  --border-color-onbrand-strong: var(--figma-color-border-onbrand-strong);
+
+  --border-color-oncomponent-default: var(--figma-color-border-oncomponent);
+  --border-color-oncomponent-strong: var(
+    --figma-color-border-oncomponent-strong
+  );
+
+  --border-color-ondanger-default: var(--figma-color-border-ondanger);
+  --border-color-ondanger-strong: var(--figma-color-border-ondanger-strong);
+
+  --border-color-onselected-default: var(--figma-color-border-onselected);
+  --border-color-onselected-strong: var(--figma-color-border-onselected-strong);
+
+  --border-color-onsuccess-default: var(--figma-color-border-onsuccess);
+  --border-color-onsuccess-strong: var(--figma-color-border-onsuccess-strong);
+
+  --border-color-onwarning-default: var(--figma-color-border-onwarning);
+  --border-color-onwarning-strong: var(--figma-color-border-onwarning-strong);
+
+  --border-color-selected-default: var(--figma-color-border-selected);
+  --border-color-selected-strong: var(--figma-color-border-selected-strong);
+
+  --border-color-strong: var(--figma-color-border-strong);
+
+  --border-color-success-default: var(--figma-color-border-success);
+  --border-color-success-strong: var(--figma-color-border-success-strong);
+
+  --border-color-warning-default: var(--figma-color-border-warning);
+  --border-color-warning-strong: var(--figma-color-border-warning-strong);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
 	--figma-color-bg-menu: #1e1e1e;

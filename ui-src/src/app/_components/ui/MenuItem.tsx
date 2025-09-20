@@ -1,10 +1,10 @@
-import type { IconProps } from "@ui-src/icons/Icons";
+import type {IconProps} from "@ui-src/icons/Icons";
 import Icons from "@ui-src/icons/Icons";
-import { Typography } from "@ui-src/src/app/_components/ui/Typography";
-import type { BindHover } from "@ui-src/src/hooks/useHover";
-import { useOnClickOutside } from "@ui-src/src/hooks/useOnClickOutside";
-import { twm } from "@ui-src/src/utils/lib/twMerge";
-import { type FC, useRef } from "react";
+import {Typography} from "@ui-src/src/app/_components/ui/Typography";
+import type {BindHover} from "@ui-src/src/hooks/useHover";
+import {useOnClickOutside} from "@ui-src/src/hooks/useOnClickOutside";
+import {twm} from "@ui-src/src/utils/lib/twMerge";
+import {type FC, useRef} from "react";
 
 type MenuItemProps = {
 	isMenuOpen: boolean;
@@ -21,7 +21,7 @@ type MenuItemProps = {
 } & BindHover;
 
 export const MenuItem: FC<MenuItemProps> = ({ isMenuOpen, onClickOutside, items, className, clickable, ...bindHover }) => {
-	const menuRef = useRef<HTMLDivElement>(null);
+	const menuRef = useRef<HTMLDivElement>(null!);
 
 	useOnClickOutside(menuRef, () => {
 		onClickOutside();

@@ -1,7 +1,7 @@
-import { TagInput } from "@ui-src/src/app/_components/ui/TagInput";
-import { useOnClickOutside } from "@ui-src/src/hooks/useOnClickOutside";
-import { type FC, useEffect, useRef, useState } from "react";
-import { type VariantProps, tv } from "tailwind-variants";
+import {TagInput} from "@ui-src/src/app/_components/ui/TagInput";
+import {useOnClickOutside} from "@ui-src/src/hooks/useOnClickOutside";
+import {type FC, useEffect, useRef, useState} from "react";
+import {tv, type VariantProps} from "tailwind-variants";
 
 const tagVariants = tv({
 	slots: {
@@ -51,7 +51,7 @@ export const Tag: FC<TagProps> = ({ text, onClickOutside, onLock, ...tagVariants
 	const [editable, setEditable] = useState(false);
 	const [isLocked, setIsLocked] = useState(false);
 	const [value, setValue] = useState(text);
-	const inputRef = useRef<HTMLInputElement>(null);
+	const inputRef = useRef<HTMLInputElement>(null!);
 
 	useEffect(() => {
 		setValue(value);
