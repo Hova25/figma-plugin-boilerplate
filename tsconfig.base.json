@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@plugin-src/*": ["plugin-src/*"],
+			"@ui-src/*": ["ui-src/*"],
+			"@shared/*": ["shared/*"]
+		}
+	}
+}

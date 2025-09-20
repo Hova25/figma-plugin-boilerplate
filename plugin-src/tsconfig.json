@@ -1,0 +1,9 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"target": "es6",
+		"lib": ["esnext", "dom"],
+		"strict": true,
+		"typeRoots": ["../node_modules/@figma"]
+	}
+}

@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 4L44 44" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    <rect x="5" y="5" width="38" height="38" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+          stroke-linejoin="round" stroke-dasharray="0.01 8"/>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M11.0276 11.7659C11.1149 11.4016 11.4016 11.1149 11.7659 11.0276L11.0276 11.7659ZM11 12.6245V36C11 36.5523 11.4477 37 12 37H35.3755L31.3755 33H15V16.6245L11 12.6245ZM33 24.0552V15H23.9448L19.9448 11H36C36.5523 11 37 11.4477 37 12V28.0552L33 24.0552Z"
+          fill="currentColor"/>
+</svg>

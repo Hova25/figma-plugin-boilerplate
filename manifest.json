@@ -1,0 +1,10 @@
+{
+	"name": "Figma plugin boilerplate",
+    "id": "1470881294816124527",
+    "api": "1.0.0",
+	"editorType": ["figma"],
+	"permissions": [],
+	"main": "dist/code.js",
+	"ui": "dist/index.html",
+	"documentAccess": "dynamic-page"
+}
